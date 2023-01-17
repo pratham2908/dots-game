@@ -139,6 +139,11 @@ function changeTurn() {
         item.classList.toggle('active');
     })
 
+    lines.forEach(line => {
+        if (!line.classList.contains('active'))
+            line.classList.toggle('blue');
+    })
+
     const turn = document.querySelector('.game-turn');
     turn.innerHTML = turn.innerHTML.includes('1') ? "Player 2 Turn" : "Player 1 Turn";
 }
