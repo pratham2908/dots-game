@@ -52,8 +52,9 @@ body {
 }
 .container .game-info .game-turn {
   width: 200px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
+  font-family: sans-serif;
 }
 .container .game {
   position: relative;
@@ -70,26 +71,37 @@ body {
 .container .game .row .line,
 .container .game .col .line {
   width: 50px;
-  height: 5px;
-  border-radius: 5px;
-  background-color: red;
-  box-shadow: 0 0 10px 2px rgb(255, 0, 0);
+  height: 15px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   cursor: pointer;
+  position: relative;
 }
 .container .game .row .line:hover,
 .container .game .col .line:hover {
-  opacity: 0.3;
+  opacity: 1;
 }
 .container .game .row .line.active,
 .container .game .col .line.active {
   opacity: 1;
 }
-.container .game .row .line.blue,
-.container .game .col .line.blue {
+.container .game .row .line::before,
+.container .game .col .line::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  background-color: red;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px rgb(255, 0, 0);
+}
+.container .game .row .line.blue::before,
+.container .game .col .line.blue::before {
   background-color: blue;
-  box-shadow: 0 0 10px 2px rgb(0, 0, 255);
+  box-shadow: 0 0 10px 1px rgb(0, 0, 255);
 }
 .container .game .col {
   width: 5px;
@@ -98,8 +110,15 @@ body {
   top: 5px;
 }
 .container .game .col .line {
-  width: 5px;
+  width: 15px;
   height: 50px;
+}
+.container .game .col .line::before {
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .container .game .dots {
   width: 100%;

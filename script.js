@@ -16,7 +16,7 @@ for (let i = 0; i < 176; i++) {
 for (let i = 0; i < 11; i++) {
     const row = document.createElement('div');
     row.classList.add('row');
-    row.style.top = `calc( ${i * 55}px)`
+    row.style.top = `calc( ${i * 55 - 5}px)`
     game.appendChild(row);
     let row1 = [];
 
@@ -33,7 +33,7 @@ for (let i = 0; i < 11; i++) {
 for (let i = 0; i < 16; i++) {
     const col = document.createElement('div');
     col.classList.add('col');
-    col.style.left = `calc(${i * 55}px)`
+    col.style.left = `calc(${i * 55 - 5}px)`
     game.appendChild(col);
     let col1 = [];
 
