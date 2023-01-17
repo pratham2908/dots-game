@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/09bf6604f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-info">
+        <div class="game-info-item active">
+          <div class="game-info-item-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="game-info-item-text">
+            <p>Player 1</p>
+            <p class="player1-score">0</p>
+          </div>
+        </div>
+        <div class="game-turn">Player1 Turn</div>
+        <div class="game-info-item">
+          <div class="game-info-item-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="game-info-item-text">
+            <p>Player 2</p>
+            <p class="player2-score">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="game">
+        <div class="dots"></div>
+      </div>
+    </div>
+    <audio src="./notification.mp3"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
